@@ -293,4 +293,244 @@
                 <div class="text-xs text-slate-400 mb-0.5">Email</div>
                 <div class="font-semibold text-white mb-2">carmelolorenzo99@gmail.com</div>
                 <button onclick="copyEmail()" id="copyBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-medium text-slate-200 transition">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  <span data-i18n="copy_btn">Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="glass-card rounded-xl p-4 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 mb-0.5">Phone / WhatsApp</div>
+                <a href="tel:+393206077696" class="font-semibold text-white hover:text-blue-400 transition">+39 320 607 7696</a>
+              </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="glass-card rounded-xl p-4 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 mb-0.5" data-i18n="loc_label">Location & Availability</div>
+                <div class="font-semibold text-white" data-i18n="loc_val">Palermo / Sicily, Italy — Available for Remote & Hybrid Roles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form (Simplified: Message Only) -->
+        <div class="md:col-span-6">
+          <div class="glass-card rounded-2xl p-6 sm:p-8">
+            <h3 class="text-xl font-bold text-white mb-2" data-i18n="form_title">Send a Direct Message</h3>
+            <p class="text-sm text-slate-400 mb-6" data-i18n="form_subtitle">
+              Compose your inquiry below to launch a pre-filled email directly to Carmelo.
+            </p>
+
+            <form id="contactForm" onsubmit="sendEmail(event)" class="space-y-5">
+              <div>
+                <label for="messageInput" class="block text-xs font-semibold tracking-wider text-slate-400 uppercase mb-2" data-i18n="form_msg_label">
+                  MESSAGE
+                </label>
+                <textarea
+                  id="messageInput"
+                  rows="6"
+                  required
+                  data-i18n-placeholder="form_msg_placeholder"
+                  placeholder="Hello Carmelo, ..."
+                  class="w-full rounded-xl bg-[#0b1120] border border-slate-700/80 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 p-4 text-sm text-white placeholder-slate-500 outline-none transition resize-y"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20"
+              >
+                <span data-i18n="form_btn">Open in Email Client</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6">
+      © 2026 Carmelo Lorenzo Giannusa. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        nav_about: "Profile",
+        nav_exp: "Experience",
+        nav_skills: "Competencies",
+        nav_edu: "Education",
+        nav_contact: "Contact",
+        nav_cta: "Get in Touch",
+        hero_badge: "Financial Services • Data & AI • Project Leadership",
+        hero_role: "IT Project Leader & Lead Data / Machine Learning Engineer",
+        hero_desc: "Computer Scientist with nearly 5 years of experience in IT consulting for a major Italian banking institution. Specialized in leading end-to-end project delivery, managing enterprise stakeholders, and architecting Machine Learning pipelines for financial risk prediction.",
+        hero_btn_primary: "Start a Conversation",
+        hero_btn_secondary: "Explore Experience",
+        stat_1: "Enterprise Banking IT",
+        stat_2: "Project Leadership",
+        stat_3: "ML Risk Pipelines",
+        about_eyebrow: "Executive Profile",
+        about_title: "Bridging Technical Execution & Client Leadership",
+        about_p1: "Operating at the intersection of software engineering, applied Machine Learning, and project governance, I help enterprise banking teams turn complex data assets into reliable operational and strategic decisions.",
+        about_p2: "Since 2024, I have served as the primary technical and project reference for key banking stakeholders—coordinating delivery timelines, managing critical releases, and simultaneously designing end-to-end predictive pipelines for financial risk assessment and executive reporting.",
+        exp_eyebrow: "Career Progression",
+        exp_title: "Professional Experience",
+        role1_title: "IT Project Leader & Lead Data/ML Engineer",
+        role1_date: "2024 — Present",
+        role_client: "Enterprise Banking Consulting (Palermo / Remote)",
+        role1_b1: "Act as primary Project Leader and direct point of contact for a leading Italian banking institution, managing project scope, delivery milestones, and stakeholder alignment.",
+        role1_b2: "Architect and develop end-to-end Machine Learning pipelines to predict financial risk states for bank clients and enterprise components.",
+        role1_b3: "Design and deliver executive dashboards and analytical reporting solutions supporting high-level banking decision-makers.",
+        role1_b4: "Coordinate cross-functional technical workflows, ensuring SLA compliance, release quality, and rapid resolution of operational escalations.",
+        role2_title: "Software & Data Warehouse Analyst",
+        role2_b1: "Engineered data ingestion, transformation, and reporting workflows within enterprise Data Warehouse environments for banking clients.",
+        role2_b2: "Performed complex financial data extraction, validation, and exploratory analysis to support risk and business intelligence teams.",
+        role2_b3: "Collaborated with senior project leads on technical specifications, testing, and production deployments in regulated banking infrastructures.",
+        skills_eyebrow: "Technical & Governance Stack",
+        skills_title: "Core Competencies",
+        skill_cat1: "Data & Machine Learning",
+        skill_cat2: "Software & Databases",
+        skill_cat3: "Project Leadership",
+        edu_eyebrow: "Academic Background",
+        edu_title: "Education",
+        edu1_badge: "2025 — Ongoing",
+        edu1_title: "M.Sc. in Computer Science and Artificial Intelligence (LM-18)",
+        edu1_desc: "Advanced specialization in Artificial Intelligence, Machine Learning architectures, and data-intensive computing systems alongside full-time enterprise leadership.",
+        edu2_title: "B.Sc. in Computer Science (L-31)",
+        edu2_desc: "Graduated with highest honors (110/110 cum laude) at age 22. Thesis focused on Chaos Theory and complex dynamical systems.",
+        contact_eyebrow: "LET'S CONNECT",
+        contact_title: "Direct Contact",
+        contact_desc: "Feel free to reach out via email or phone for professional inquiries and technical networking.",
+        copy_btn: "Copy Email",
+        copied_btn: "Copied!",
+        loc_label: "Location & Availability",
+        loc_val: "Palermo / Sicily, Italy — Available for Remote & Hybrid Roles",
+        form_title: "Send a Direct Message",
+        form_subtitle: "Compose your inquiry below to launch a pre-filled email directly to Carmelo.",
+        form_msg_label: "MESSAGE",
+        form_msg_placeholder: "Hello Carmelo, ...",
+        form_btn: "Open in Email Client"
+      },
+      it: {
+        nav_about: "Profilo",
+        nav_exp: "Esperienza",
+        nav_skills: "Competenze",
+        nav_edu: "Formazione",
+        nav_contact: "Contatti",
+        nav_cta: "Contattami",
+        hero_badge: "Financial Services • Data & AI • Project Leadership",
+        hero_role: "IT Project Leader & Lead Data / Machine Learning Engineer",
+        hero_desc: "Informatico con quasi 5 anni di esperienza nella consulenza IT per un primario istituto bancario italiano. Specializzato nella gestione end-to-end dei progetti, nel coordinamento degli stakeholder e nello sviluppo di pipeline di Machine Learning per la predizione del rischio finanziario.",
+        hero_btn_primary: "Avvia una Conversazione",
+        hero_btn_secondary: "Esplora l'Esperienza",
+        stat_1: "Consulenza IT Bancaria",
+        stat_2: "Project Leadership",
+        stat_3: "Pipeline ML Rischio",
+        about_eyebrow: "Profilo Professionale",
+        about_title: "Unire Esecuzione Tecnica e Leadership sul Cliente",
+        about_p1: "Operando tra ingegneria del software, Machine Learning applicato e governance progettuale, supporto i team bancari enterprise nel trasformare patrimoni dati complessi in decisioni operative e strategiche affidabili.",
+        about_p2: "Dal 2024 ricopro il ruolo di riferimento tecnico e progettuale diretto per gli stakeholder bancari, coordinando le tempistiche di rilascio e progettando contemporaneamente pipeline predittive end-to-end per la valutazione del rischio finanziario e il reporting direzionale.",
+        exp_eyebrow: "Percorso Professionale",
+        exp_title: "Esperienza Lavorativa",
+        role1_title: "IT Project Leader & Lead Data/ML Engineer",
+        role1_date: "2024 — Presente",
+        role_client: "Consulenza IT Settore Bancario (Palermo / Remoto)",
+        role1_b1: "Project Leader e punto di riferimento diretto per un primario istituto bancario italiano, gestendo perimetro progettuale, milestone di rilascio e allineamento con gli stakeholder.",
+        role1_b2: "Progettazione e sviluppo di pipeline Machine Learning end-to-end per la predizione degli stati di rischio finanziario di clienti bancari e componenti enterprise.",
+        role1_b3: "Realizzazione di dashboard direzionali e soluzioni di reporting analitico a supporto del management bancario.",
+        role1_b4: "Coordinamento dei flussi tecnici, garantendo il rispetto degli SLA, la qualità dei rilasci e la rapida risoluzione delle criticità operative.",
+        role2_title: "Software & Data Warehouse Analyst",
+        role2_b1: "Sviluppo di flussi di acquisizione, trasformazione e reporting dei dati in ambienti Data Warehouse enterprise per clienti bancari.",
+        role2_b2: "Estrazione, validazione e analisi esplorativa di dati finanziari complessi a supporto dei team di risk management e business intelligence.",
+        role2_b3: "Collaborazione con i lead progettuali su specifiche tecniche, fasi di test e rilasci in produzione in infrastrutture bancarie regolamentate.",
+        skills_eyebrow: "Competenze Tecniche e Gestionali",
+        skills_title: "Aree di Competenza",
+        skill_cat1: "Data & Machine Learning",
+        skill_cat2: "Software & Database",
+        skill_cat3: "Project Leadership",
+        edu_eyebrow: "Percorso Accademico",
+        edu_title: "Istruzione",
+        edu1_badge: "2025 — In corso",
+        edu1_title: "Laurea Magistrale in Computer Science and Artificial Intelligence (LM-18)",
+        edu1_desc: "Specializzazione avanzata in Intelligenza Artificiale, architetture di Machine Learning e sistemi ad alta intensità di dati in parallelo all'attività lavorativa full-time.",
+        edu2_title: "Laurea Triennale in Informatica (L-31)",
+        edu2_desc: "Conseguita con il massimo dei voti (110/110 e lode) a 22 anni. Tesi dedicata alla Teoria del Caos e ai sistemi dinamici complessi.",
+        contact_eyebrow: "ENTRIAMO IN CONTATTO",
+        contact_title: "Contatto Diretto",
+        contact_desc: "Scrivimi o chiamami direttamente per contatti professionali e confronto su tematiche IT e Data Science.",
+        copy_btn: "Copia Email",
+        copied_btn: "Copiata!",
+        loc_label: "Posizione e Disponibilità",
+        loc_val: "Palermo / Sicilia — Disponibile per ruoli Remoti e Ibridi",
+        form_title: "Invia un Messaggio Diretto",
+        form_subtitle: "Scrivi qui sotto la tua richiesta per aprire un'email già precompilata verso Carmelo.",
+        form_msg_label: "MESSAGGIO",
+        form_msg_placeholder: "Ciao Carmelo, ...",
+        form_btn: "Apri nel Client Email"
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.getElementById('btn-en').className = lang === 'en'
+        ? 'px-2.5 py-1 rounded-md bg-blue-600 text-white transition'
+        : 'px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition';
+      document.getElementById('btn-it').className = lang === 'it'
+        ? 'px-2.5 py-1 rounded-md bg-blue-600 text-white transition'
+        : 'px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+          el.setAttribute('placeholder', translations[lang][key]);
+        }
+      });
+    }
+
+    function copyEmail() {
+      navigator.clipboard.writeText('carmelolorenzo99@gmail.com');
+      const span = document.querySelector('#copyBtn span');
+      span.textContent = translations[currentLang].copied_btn;
+      setTimeout(() => {
+        span.textContent = translations[currentLang].copy_btn;
+      }, 2000);
+    }
+
+    function sendEmail(event) {
+      event.preventDefault();
+      const email = 'carmelolorenzo99@gmail.com';
+      const subject = encodeURIComponent(
+        currentLang === 'en' ? 'Contact from Portfolio Website' : 'Contatto dal Sito Portfolio'
+      );
+      const messageText = document.getElementById('messageInput').value.trim();
+      const body = encodeURIComponent(messageText);
+
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
